@@ -2,14 +2,15 @@
 
 var game = {
     music: "98_Lost_Mine.mp3",
-    background_image: "intro-bg.jpg",
+    background_image: "http://maplehills.org/wp-content/uploads/2018/07/Jumanji-Welcome-to-the-Jungle-2017trtr.jpg",
     levels: {
 
         start: {
-            message: "You come across a dark cave",
+            
+            message: "You and your friends discover an old video game console",
             choices: [
                 {
-                    text: "Enter the cave",
+                    text: "Play the game",
                     nextLevel: "cave",
                 },
 
@@ -23,12 +24,17 @@ var game = {
         cave: {
             background_image: "fire.gif",
             music: "Final-Fantasy-7-Boss-Battle.mp3",
-            message: "You come across a fire monster or something!",
+            message: "You are being chased by cyclists !",
             choices: [
                 {
-                    text: "Start over",
-                    nextLevel: "start",
+                    text: "fight",
+                    nextLevel: "send",
                 },
+                {
+                    text: "run",
+                   nextLevel: "field",
+                }
+                  
             ]
         },
 
@@ -42,5 +48,32 @@ var game = {
             ]
         },
 
-    }
+    },
+     send:{
+            message: "your friend is being eaten by a hippo!",
+            choices: [
+                {
+                    text: "help your frind",
+                    nextLevel: "start",
+                },
+                
+                {
+                
+                
+                   text: "keep on moving",
+                   nextLevel: "go",
+                }
+                ]
+     },
+      go: {
+            message: "you are a true jumanji",
+            choices: [
+                {
+                    text: "Start over",
+                    nextLevel: "start",
+                },
+            ], 
+      },
+
+     
 };
